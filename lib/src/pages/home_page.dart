@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:flutter_news_web_page/src/pages/top_section_page.dart';
+import 'package:flutter_news_web_page/src/pages/section_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
