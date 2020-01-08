@@ -3,7 +3,7 @@ import 'package:flutter_news_web_page/src/helpers/responsive_helpers.dart';
 import 'package:flutter_news_web_page/src/models/article_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-GridTile buildArticleTile(Article article, String url, MediaQueryData mediaQuery) {
+GridTile articleTile(Article article, String url, MediaQueryData mediaQuery) {
     return GridTile(
       child: GestureDetector(
         onTap: () => _launchUrl(article.url),
