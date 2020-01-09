@@ -47,3 +47,20 @@ double responsiveTitleHeight(MediaQueryData mediaQuery) {
   }
   return mediaQuery.size.width * 0.05;
 }
+
+double responsivePageTitleHeight(MediaQueryData mediaQuery){
+  double deviceWidth = mediaQuery.size.width;
+  if (deviceWidth < 700) {
+    return mediaQuery.size.width * 0.045;
+  } else if (deviceWidth < 1200) {
+    return mediaQuery.size.width * 0.045;
+  } else if (deviceWidth < 1650) {
+    return mediaQuery.size.width * 0.045;
+  }
+  return mediaQuery.size.width * 0.045;
+}
+
+double responsiveBarHeight(MediaQueryData mediaQuery){
+  double deviceWidth = mediaQuery.size.width;
+  return deviceWidth*0.08;
+}

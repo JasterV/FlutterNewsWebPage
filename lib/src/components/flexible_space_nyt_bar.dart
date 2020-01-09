@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_news_web_page/src/helpers/responsive_helpers.dart';
 
-final SliverAppBar nytAppBar = SliverAppBar(
-  backgroundColor: Colors.white,
-  expandedHeight: 170,
-  flexibleSpace: FlexibleSpaceBar(
+
+class FlexibleBar extends StatelessWidget {
+  const FlexibleBar({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FlexibleSpaceBar(
     background: Stack(
       children: <Widget>[
         Container(
-          height: 170.0,
+          height: responsiveBarHeight(MediaQuery.of(context)),
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -20,7 +24,7 @@ final SliverAppBar nytAppBar = SliverAppBar(
           child: Text(
             'NYTimes Top Articles',
             style: TextStyle(
-              fontSize: 60.0,
+              fontSize: responsivePageTitleHeight(MediaQuery.of(context)),
               letterSpacing: 1.0,
               color: Colors.white,
               fontFamily: 'Anton',
@@ -29,5 +33,6 @@ final SliverAppBar nytAppBar = SliverAppBar(
         ),
       ],
     ),
-  ),
-);
+  );
+  }
+}

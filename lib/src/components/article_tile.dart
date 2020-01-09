@@ -14,14 +14,18 @@ GridTile articleTile(Article article, String url, MediaQueryData mediaQuery) {
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
-                ),
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
                 image: DecorationImage(
                   image: NetworkImage(article.imageUrl),
                   fit: BoxFit.cover,
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    offset: Offset(10, 10),
+                    blurRadius: 5.0,
+                  ),
+                ],
               ),
             ),
             Container(
@@ -38,8 +42,8 @@ GridTile articleTile(Article article, String url, MediaQueryData mediaQuery) {
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black12,
-                    offset: Offset(0, 1),
-                    blurRadius: 6.0,
+                    offset: Offset(10, 10),
+                    blurRadius: 5.0,
                   ),
                 ],
               ),
@@ -48,7 +52,7 @@ GridTile articleTile(Article article, String url, MediaQueryData mediaQuery) {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                 ),
                 maxLines: 2,
               ),

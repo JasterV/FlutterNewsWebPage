@@ -9,21 +9,13 @@ class SectionTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
       child: GestureDetector(
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border(
-              right: BorderSide(color: Colors.grey[600], width: 0.5),
-              left: BorderSide(color: Colors.grey[600], width: 0.5),
-              bottom: BorderSide(color: Colors.grey[600], width: 0.5),
-            ),
-          ),
-          child: Center(
-            child: Text(
-              section,
-              style: TextStyle(fontSize: 20.0, color: Colors.grey[600]),
-            ),
+        child: Center(
+          child: Text(
+            "${section[0].toUpperCase()}${section.substring(1)}",
+            style: TextStyle(fontSize: 20.0, color: Colors.black, fontWeight: FontWeight.w500),
           ),
         ),
         onTap: () => bloc.changeSection(section),
