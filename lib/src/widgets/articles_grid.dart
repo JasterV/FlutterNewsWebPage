@@ -4,7 +4,7 @@ import 'package:flutter_news_web_page/src/helpers/responsive_helpers.dart';
 import 'package:flutter_news_web_page/src/models/article_model.dart';
 
 class ArticlesGrid extends StatelessWidget {
-  List<Article> _articles;
+  final List<Article> _articles;
   ArticlesGrid(this._articles);
   @override
   Widget build(BuildContext context) {
